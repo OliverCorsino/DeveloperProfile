@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="120dp" app:srcCompat="@drawable/devslopesbanner"
+            android:id="@+id/bannerImage"
+            android:scaleType="centerCrop" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp" app:srcCompat="@drawable/devslopesprofilelogo"
+            android:id="@+id/logoImage"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
+            android:layout_marginTop="72dp" app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:text="Oliver Corsino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileName" android:textSize="24sp" app:layout_constraintStart_toEndOf="@+id/logoImage"
+            android:layout_marginStart="72dp" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/bannerImage"/>
+    <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp" app:srcCompat="@drawable/camerabutton"
+            android:id="@+id/cameraImage"
+            app:layout_constraintStart_toEndOf="@+id/profileName" app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintEnd_toStartOf="@+id/favoriteImage" app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintHorizontal_chainStyle="packed" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="@+id/favoriteImage"
+            app:layout_constraintBottom_toBottomOf="@+id/favoriteImage" app:layout_constraintVertical_bias="1.0"/>
+    <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp" app:srcCompat="@drawable/favoritebutton"
+            android:id="@+id/favoriteImage" app:layout_constraintStart_toEndOf="@+id/cameraImage"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/inboxImage"
+            app:layout_constraintVertical_chainStyle="packed" app:layout_constraintHorizontal_chainStyle="packed"
+            android:layout_marginEnd="24dp" android:layout_marginStart="24dp"
+            app:layout_constraintTop_toTopOf="@+id/inboxImage"
+            app:layout_constraintBottom_toBottomOf="@+id/inboxImage"/>
+    <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp" app:srcCompat="@drawable/inboxbutton"
+            android:id="@+id/inboxImage"
+            app:layout_constraintStart_toEndOf="@+id/favoriteImage" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_chainStyle="packed"
+            android:layout_marginEnd="32dp" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/bannerImage"/>
+    <ImageView
+            android:layout_width="106dp"
+            android:layout_height="105dp" app:srcCompat="@drawable/dataimage"
+            android:id="@+id/dataImageGrid"
+            android:scaleType="centerCrop" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/logoImage" android:layout_marginStart="32dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintDimensionRatio="1:1"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guideline"
+                                          android:orientation="vertical" app:layout_constraintGuide_percent="0.500684"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp" app:srcCompat="@drawable/imagesimage"
+            android:id="@+id/pictureImageGrid"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@+id/videoImageGrid"
+            app:layout_constraintBottom_toBottomOf="@+id/videoImageGrid"
+            app:layout_constraintEnd_toStartOf="@+id/codeImageGrid"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp" app:srcCompat="@drawable/videosimage"
+            android:id="@+id/videoImageGrid"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toEndOf="@+id/dataImageGrid"
+            app:layout_constraintEnd_toStartOf="@+id/guideline" app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@+id/dataImageGrid"
+            app:layout_constraintBottom_toBottomOf="@+id/dataImageGrid"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp" app:srcCompat="@drawable/codeimage"
+            android:id="@+id/codeImageGrid"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="@+id/pictureImageGrid"
+            app:layout_constraintBottom_toBottomOf="@+id/pictureImageGrid"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintVertical_bias="0.0"
+    />
+</android.support.constraint.ConstraintLayout>
